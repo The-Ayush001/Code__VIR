@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Progress - PrepMate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="/progress.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1 class="logo">Prep<span style="color: #e100ff;">Mate</span></h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/Courses">Courses</a>
+      <a href="/progress">Progress</a>
+      <a href="/reminder">Reminders</a>
+    </nav>
+    <div class="btn">
+      <button class=" fancy-button">Login</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Student Input Form -->
+    <section>
+      <h2>Enter Your Data</h2>
+      <form id="studentForm">
+        <label>Subject Name</label>
+        <input type="text" id="courseName" placeholder="e.g. Math" required>
+
+        <label>Completion (%)</label>
+        <input type="number" id="courseCompletion" placeholder="e.g. 70" required>
+
+        <label>Study Hours (this week)</label>
+        <input type="number" id="studyHours" placeholder="e.g. 5" required>
+
+        <label>Quiz Score (%)</label>
+        <input type="number" id="quizScore" placeholder="e.g. 80" required>
+
+        <input class="buttonwa" type="submit"></input>
+      </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section>
+      <h2>Course Completion</h2>
+      <div class="course-grid" id="courses"></div>
+    </section>
+
+    <section>
+      <h2>Weekly Study Hours</h2>
+      <canvas id="studyChart" width="600" height="200"></canvas>
+    </section>
+
+    <section>
+      <h2>Average Quiz Scores</h2>
+      <ul id="scores"></ul>
+    </section>
+  </main>
+
+  <footer data-aos="zoom-in-up">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <span style="color: #4f46e5;">Prep</span><span style="color: #e100ff;">Mate</span>
+          <p>Bridging the education gap through technology and innovation.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">For Schools</a></li>
+            <li><a href="#">For Teachers</a></li>
+            <li><a href="#">For Students</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 PrepMate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./progress.js"></script>
+</body>
+</html>

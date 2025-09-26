@@ -1,0 +1,96 @@
+flashcard.html
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo Cards - PrepMate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="/flashcaeds.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="logo">Prep<span style="color: #e100ff;">Mate</span></h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/Courses">Courses</a>
+      <a href="/progress">Progress</a>
+      <a href="/reminder">Reminders</a>
+    </nav>
+    <div class="btn">
+      <button class=" fancy-button">Login</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card-header">
+      <h3><i class="fas fa-list-check"></i> Flashcards </h3>
+    </div>
+
+    <!-- Form to add new todo -->
+    <form class="add-todo-form" id="todoForm">
+      <input type="text" id="todoInput" placeholder="Add a new task..." required />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="todo-cards" id="todoCardsContainer">
+      <!-- Todo cards will appear here -->
+    </div>
+  </div>
+  <footer data-aos="zoom-in-up">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <span style="color: #4f46e5;">Prep</span><span style="color: #e100ff;">Mate</span>
+          <p>Bridging the education gap through technology and innovation.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">For Schools</a></li>
+            <li><a href="#">For Teachers</a></li>
+            <li><a href="#">For Students</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 PrepMate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./flashcards.js"></script>
+
+</body>
+
+</html>

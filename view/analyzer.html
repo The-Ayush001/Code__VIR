@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus Analyzer - Identify Weak Topics</title>
+    <link rel="stylesheet" href="/analyzer.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Prep<span style="color: #e100ff;">Mate</span></h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/Courses">Courses</a>
+            <a href="/progress">Progress</a>
+            <a href="/reminder">Reminders</a>
+        </nav>
+        <div class="btn">
+            <button class=" fancy-button">Login</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Enter Your Syllabus Topics</h2>
+            <p>Add each topic from your syllabus and rate your current understanding level.</p>
+
+            <div class="form-group">
+                <label for="subject-name">Subject/Course Name</label>
+                <input type="text" id="subject-name" placeholder="e.g., Mathematics, Physics, History">
+            </div>
+
+            <div id="topics-container">
+                <div class="topic-row">
+                    <div class="topic-name">
+                        <label for="topic-1">Topic Name</label>
+                        <input type="text" id="topic-1" placeholder="e.g., Quadratic Equations">
+                    </div>
+                    <div class="topic-difficulty">
+                        <label for="difficulty-1">Understanding Level</label>
+                        <select id="difficulty-1" class="difficulty-select">
+                            <option value="5">Excellent</option>
+                            <option value="4">Good</option>
+                            <option value="3">Average</option>
+                            <option value="2">Weak</option>
+                            <option value="1">Very Weak</option>
+                        </select>
+                    </div>
+                    <div class="topic-actions">
+                        <label>&nbsp;</label>
+                        <button class="remove-btn" onclick="removeTopic(1)">×</button>
+                    </div>
+                </div>
+            </div>
+
+            <button id="add-topic-btn" class="btn"
+                style="background-color: #4f46e5; color: white; border: none; border-radius: 6px; padding: 8px 16px; margin-top: 20px; cursor: pointer; overflow: hidden;">+
+                Add Another Topic</button>
+
+            <div style="margin-top: 30px; text-align: center;"></div>
+            <button id="analyze-btn" class="btn btn-block"
+                style="width: 100%; padding: 12px; font-size: 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer; overflow: hidden;">Analyze
+                Weak Topics</button>
+        </div>
+    </div>
+
+    <div id="results-section" class="results-section">
+        <div class="card">
+            <h2>Analysis Results for <span id="results-subject"></span></h2>
+
+            <div class="stats-box">
+                <div class="stats-value" id="weak-topics-count">0</div>
+                <div class="stats-label">Topics Need Improvement</div>
+            </div>
+
+            <h3>Understanding Level by Topic</h3>
+            <div id="weakness-list"></div>
+
+            <div class="chart-container">
+                <canvas id="understanding-chart"></canvas>
+            </div>
+
+            <div class="recommendations">
+                <h3>Study Recommendations</h3>
+                <div id="recommendations-list"></div>
+            </div>
+
+            <button id="reset-btn" class="btn">Analyze Another Syllabus</button>
+        </div>
+    </div>
+    </div>
+    <footer data-aos="zoom-in-up">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <span style="color: #4f46e5;">Prep</span><span style="color: #e100ff;">Mate</span>
+                    <p>Bridging the education gap through technology and innovation.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">For Schools</a></li>
+                        <li><a href="#">For Teachers</a></li>
+                        <li><a href="#">For Students</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PrepMate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./analyzer.js"></script>
+</body>
+
+</html>
