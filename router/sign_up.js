@@ -1,18 +1,3 @@
-// const express = require('express');
-// const mongoose = require('mongoose');
-// const SignRoute = express.Router(); 
-
-// // Schema & Model
-// const contactSchema = new mongoose.Schema({
-//   name: String,
-//   email: String,
-//   phone: String,
-// });
-// const Contact = mongoose.model('Contact', contactSchema);
-
-
-
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -41,18 +26,15 @@ signRoute.get('/sign_up', (req, res) => {
     <h1 style="text-align:center;">Register Yourself</h1>
     <form action="/submit" method="post" style="max-width:400px;margin:30px auto;padding:24px;border-radius:8px;background:#f9f9f9;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
       <label>Name:</label>
-      <input type="text" name="name" required style="width:100%;padding:8px;margin-bottom:16px;">
+        <input type="text" name="name" required style="width:100%;padding:8px;margin-bottom:16px;">
       <label>Email:</label>
-      <input type="email" name="email" required style="width:100%;padding:8px;margin-bottom:16px;">
+        <input type="email" name="email" required style="width:100%;padding:8px;margin-bottom:16px;">
       <label>Phone:</label>
-      <input type="text" name="phone" required style="width:100%;padding:8px;margin-bottom:16px;">
-      <input type="submit" value="Submit" style="width:100%;padding:10px;background:#007bff;color:#fff;border:none;border-radius:4px;">
+        <input type="text" name="phone" required style="width:100%;padding:8px;margin-bottom:16px;">
+        <input type="submit" value="Submit" style="width:100%;padding:10px;background:#007bff;color:#fff;border:none;border-radius:4px;">
     </form>
   `);
 });
-
-
-
 
 
 // POST form

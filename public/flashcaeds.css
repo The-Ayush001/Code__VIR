@@ -81,19 +81,22 @@
     justify-content: center;
     align-items: center;
   }
- nav a:hover {
-  font-size: larger;
-  background: linear-gradient(to right,#0080ff, #e100ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-} 
-nav a:active {
-  color: #fff;
-  background: linear-gradient(45deg, #0080ff, #e100ff);
-  border-radius: 100px;
-  transition: background 0.3s, color 0.3s;
-  color: white;
-}
+
+  nav a:hover {
+    font-size: larger;
+    background: linear-gradient(to right, #0080ff, #e100ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  nav a:active {
+    color: #fff;
+    background: linear-gradient(45deg, #0080ff, #e100ff);
+    border-radius: 100px;
+    transition: background 0.3s, color 0.3s;
+    color: white;
+  }
+
   .btn {
     /* background-color: #10b981; */
     display: flex;
@@ -390,78 +393,78 @@ nav a:active {
   }
 
   /* Responsive tweaks */
-@media screen and (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-    padding: 1rem 2rem;
+  @media screen and (max-width: 1024px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      width: 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+    .add-todo-form {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .add-todo-form input[type="text"],
+    .add-todo-form button {
+      width: 100%;
+    }
+
+    .todo-cards {
+      justify-content: center;
+    }
+
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
 
-  nav {
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: auto;
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      font-size: 1rem;
+      padding: 0.3rem 0.5rem;
+    }
+
+    .todo-card {
+      width: 45%;
+    }
+
+    .card-header h3 {
+      font-size: 1.3rem;
+    }
   }
 
-  .add-todo-form {
-    flex-direction: column;
-    gap: 10px;
-  }
+  @media screen and (max-width: 480px) {
+    header {
+      padding: 0.5rem 1rem;
+    }
 
-  .add-todo-form input[type="text"],
-  .add-todo-form button {
-    width: 100%;
-  }
+    nav a {
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+    }
 
-  .todo-cards {
-    justify-content: center;
-  }
+    .todo-card {
+      width: 90%;
+    }
 
-  .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
 
-@media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
+    footer {
+      padding: 2rem 1rem;
+    }
   }
-
-  nav a {
-    font-size: 1rem;
-    padding: 0.3rem 0.5rem;
-  }
-
-  .todo-card {
-    width: 45%;
-  }
-
-  .card-header h3 {
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header {
-    padding: 0.5rem 1rem;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    padding: 0.25rem 0.5rem;
-  }
-
-  .todo-card {
-    width: 90%;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    padding: 2rem 1rem;
- }
-}

@@ -76,12 +76,14 @@ nav a {
   justify-content: center;
   align-items: center;
 }
+
 nav a:hover {
   font-size: larger;
-  background: linear-gradient(to right,#0080ff, #e100ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #0080ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 nav a:active {
   color: #fff;
   background: linear-gradient(45deg, #0080ff, #e100ff);
@@ -89,6 +91,7 @@ nav a:active {
   transition: background 0.3s, color 0.3s;
   color: white;
 }
+
 .btn {
   /* background-color: #10b981; */
   display: flex;
@@ -394,5 +397,5 @@ footer {
   nav {
     flex-wrap: wrap;
     gap: 5px;
- }
+  }
 }

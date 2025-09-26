@@ -23,8 +23,6 @@
     color: var(--foreground);
     background-color: var(--background);
     overflow-x: hidden;
-    /* background-color: black; */
-    /* color: white; */
     position: relative;
   }
 
@@ -81,19 +79,22 @@
     justify-content: center;
     align-items: center;
   }
+
   nav a:hover {
-  font-size: larger;
-  background: linear-gradient(to right,#0080ff, #e100ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-}
-nav a:active {
-  color: #fff;
-  background: linear-gradient(45deg, #0080ff, #e100ff);
-  border-radius: 100px;
-  transition: background 0.3s, color 0.3s;
-  color: white;
-}
+    font-size: larger;
+    background: linear-gradient(to right, #0080ff, #e100ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  nav a:active {
+    color: #fff;
+    background: linear-gradient(45deg, #0080ff, #e100ff);
+    border-radius: 100px;
+    transition: background 0.3s, color 0.3s;
+    color: white;
+  }
+
   .btn {
     /* background-color: #10b981; */
     display: flex;
@@ -326,69 +327,69 @@ nav a:active {
   }
 
   /* Responsive tweaks */
-@media screen and (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-    padding: 1rem 2rem;
+  @media screen and (max-width: 1024px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      width: 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+    .micro-flex {
+      justify-content: center;
+    }
+
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
 
-  nav {
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: auto;
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      font-size: 1rem;
+      padding: 0.3rem 0.5rem;
+    }
+
+    .micro-card {
+      flex: 1 1 45%;
+      padding: 10px;
+    }
+
+    .micro-icon {
+      font-size: 2rem;
+    }
   }
 
-  .micro-flex {
-    justify-content: center;
-  }
+  @media screen and (max-width: 480px) {
+    header {
+      padding: 0.5rem 1rem;
+    }
 
-  .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
+    nav a {
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+    }
 
-@media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
+    .micro-card {
+      flex: 1 1 90%;
+    }
 
-  nav a {
-    font-size: 1rem;
-    padding: 0.3rem 0.5rem;
-  }
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
 
-  .micro-card {
-    flex: 1 1 45%;
-    padding: 10px;
+    footer {
+      padding: 2rem 1rem;
+    }
   }
-
-  .micro-icon {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  header {
-    padding: 0.5rem 1rem;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    padding: 0.25rem 0.5rem;
-  }
-
-  .micro-card {
-    flex: 1 1 90%;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    padding: 2rem 1rem;
- }
-}
