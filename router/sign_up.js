@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const signRoute = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/contact')
+mongoose.connect('mongodb+srv://ayush007arm_db_user:Y5rvqumTzWKGEmbb@cluster0.2t5rbgi.mongodb.net/contact')
   .then(() => console.log("✅ Connected to MongoDB"))
   .catch(err => console.error("❌ MongoDB error:", err));
 
@@ -54,3 +54,4 @@ signRoute.post('/submit', (req, res) => {
 });
 
 module.exports = signRoute;
+
