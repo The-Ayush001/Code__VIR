@@ -7,11 +7,18 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded()); // to parse form data
 
 const homeRoute = require('./router/Home');
-const coursesRouter = require('./router/courses');
-const quizzesRouter = require('./router/quizzes');
-const microRouter = require('./router/micro');
-const flashcardsRouter = require('./router/flashcards');
-const analyzeRouter = require('./router/analyzer');
+
+const { coursesRoute } = require('./router/courses');  // Importing the coursesRoute
+const { quizzesRoute } = require('./router/courses');  // Importing the quizzesRoute
+const { microRoute } = require('./router/courses');  // Importing the microRoute
+const { flashcardsRoute } = require('./router/courses');  // Importing the flashcardsRoute
+const { analyzerRoute} = require('./router/courses')  // Importing the analyzerRoute
+
+const coursesRouter = coursesRoute;  // Renaming for clarity
+const quizzesRouter = quizzesRoute;  // Renaming for clarity
+const microRouter = microRoute;  // Renaming for clarity
+const flashcardsRouter = flashcardsRoute;  // Renaming for clarity
+const analyzerRouter = analyzerRoute; // Renaming for clarity
 
 
 const progressRoute = require('./router/progress');
@@ -31,7 +38,7 @@ app.use(reminderRoute);
 app.use(quizzesRouter);
 app.use(microRouter);
 app.use(flashcardsRouter);
-app.use(analyzeRouter);
+app.use(analyzerRouter);
 app.use(signRoute);
 
 const PORT = 8000;
